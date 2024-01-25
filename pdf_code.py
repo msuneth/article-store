@@ -1,5 +1,7 @@
 from fpdf import FPDF
 
+a
+
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
 
