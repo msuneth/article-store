@@ -1,6 +1,10 @@
 from fpdf import FPDF
 
-a
+
+# class PDF:
+#     def __init__(self, article_object):
+#
+#         pass
 
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.add_page()
