@@ -14,7 +14,9 @@ class Article:
         #print(self.article_name,self.article_price,self.article_stock)
 
     def stock_update(self):
-        pass
+        df.loc[df["id"]== article_Id,"in stock"] = self.article_stock - 1
+        df.to_csv("articles.csv",index=False)
+        print("stock updated")
 
     def generate_pdf(self):
         pdf = FPDF(orientation="P", unit="mm", format="A4")
@@ -29,6 +31,8 @@ class Article:
         pdf.set_font(family="Times", size=16, style="B")
         pdf.cell(w=50, h=8, txt=f"Price: {self.article_price}", ln=1)
         pdf.output("receipt.pdf")
+        print("pdf generated")
+
 
 
 print(df)
